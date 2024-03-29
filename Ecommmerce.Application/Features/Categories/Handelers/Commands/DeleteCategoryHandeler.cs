@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
 {
-    public class DeleteCategoryHandeler:IRequestHandler<DeleteCategoryReuest ,Unit>
+    public class DeleteCategoryHandeler : IRequestHandler<DeleteCategoryReuest, Unit>
     {
         private readonly ICategoryRepository categoryRepository;
         private readonly IMapper mapper;
@@ -22,6 +22,11 @@ namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
 
         public async Task<Unit> Handle(DeleteCategoryReuest request, CancellationToken cancellationToken)
         {
+            var category = await categoryRepository.GetAsync(request.Id);
+            if (category is null)
+            {
+                throw new Exceptions.NotFoundException(nameof(category), request.Id);
+            }
             await categoryRepository.DeleteAsync(request.Id);
             return Unit.Value;
         }

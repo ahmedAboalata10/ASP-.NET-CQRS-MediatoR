@@ -1,4 +1,4 @@
-﻿using Ecommmerce.Application.DTO.Entities;
+﻿using Ecommmerce.Application.DTO.Entities.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;

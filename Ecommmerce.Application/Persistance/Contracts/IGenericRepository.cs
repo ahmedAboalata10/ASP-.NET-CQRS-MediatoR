@@ -9,5 +9,6 @@ namespace Ecommmerce.Application.Persistance.Contracts
         Task  CreateAsync(T entity);
         Task DeleteAsync(int id);
         Task UpdateAsync(int id, T entity);
+        Task<bool> ExistAsync(int id);
     }
 }

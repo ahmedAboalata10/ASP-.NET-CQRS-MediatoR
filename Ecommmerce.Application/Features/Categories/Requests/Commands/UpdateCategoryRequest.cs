@@ -1,4 +1,4 @@
-﻿using Ecommmerce.Application.DTO.Entities;
+﻿using Ecommmerce.Application.DTO.Entities.Category;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Ecommmerce.Application.Features.Categories.Requests.Commands
 {
-    public class UpdateCategoryRequest:IRequest<Unit>
+    public class UpdateCategorytRequest:IRequest<Unit>
     {
         public int Id { get; set; }
-        public CategoryDTO Category { get; set; }
+        public CategoryDTO CategoryDTO { get; set; }
     }
 }

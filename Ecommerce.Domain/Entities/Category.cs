@@ -10,5 +10,6 @@
         public string Name { set; get; }
         public string Description { set; get; }
 
+        public virtual ICollection<Product> Products { get;} = new HashSet<Product>();
     }
 }

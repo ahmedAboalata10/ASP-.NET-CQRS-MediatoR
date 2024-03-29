@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Ecommerce.Domain.Entities;
-using Ecommmerce.Application.DTO.Entities;
+using Ecommmerce.Application.DTO.Entities.Category;
 
 namespace Ecommmerce.Application.MappingProfiles
 {

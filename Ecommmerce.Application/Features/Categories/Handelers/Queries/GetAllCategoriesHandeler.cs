@@ -1,4 +1,4 @@
-﻿using Ecommmerce.Application.DTO.Entities;
+﻿using Ecommmerce.Application.DTO.Entities.Category;
 using Ecommmerce.Application.Features.Categories.Requests.Queries;
 using Ecommmerce.Application.Persistance.Contracts;
 using MediatR;

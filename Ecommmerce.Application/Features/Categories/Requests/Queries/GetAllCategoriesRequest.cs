@@ -1,4 +1,4 @@
-﻿using Ecommmerce.Application.DTO.Entities;
+﻿using Ecommmerce.Application.DTO.Entities.Category;
 using MediatR;
 using System;
 using System.Collections.Generic;

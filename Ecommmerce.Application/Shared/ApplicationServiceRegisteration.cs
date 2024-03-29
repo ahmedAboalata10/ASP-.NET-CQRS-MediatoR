@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Ecommmerce.Application.Shared
         {
             services.AddAutoMapper(typeof(CategoryMappingProfile));
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }
