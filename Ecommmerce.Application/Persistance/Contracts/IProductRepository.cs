@@ -9,5 +9,5 @@ namespace Ecommmerce.Application.Persistance.Contracts;
 
 public interface IProductRepository:IGenericRepository<Product>
 {
-
+    Task<List<Product>> GetAllProductsWithInclude();
 }
