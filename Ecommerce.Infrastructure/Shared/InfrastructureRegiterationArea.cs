@@ -13,7 +13,7 @@ namespace Ecommerce.Infrastructure.Shared
     {
         public static void ConfiureInfrastrctureServise(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<EmailSender>(configuration.GetSection("EmailSetting"));
+            services.Configure<EmailSender>(configuration.GetSection("EmailSettings"));
             services.AddTransient<EmailSender, EmailSender>();
         }
     }
