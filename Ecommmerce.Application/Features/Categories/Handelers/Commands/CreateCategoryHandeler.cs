@@ -37,7 +37,7 @@ namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
             await categoryRepository.CreateAsync(category);
             response .Success= true;
             response.Message="Successfully Created";
-            response.Id = request.CategoryDTO.Id;
+            response.Id = category.Id;
             return response;
         }
     }

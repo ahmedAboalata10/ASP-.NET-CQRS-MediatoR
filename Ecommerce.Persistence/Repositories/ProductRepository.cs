@@ -13,7 +13,6 @@ namespace Ecommerce.Persistence.Repositories
     public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
         private readonly ApplicationDBContext context;
-
         public ProductRepository(ApplicationDBContext context) : base(context)
         {
             this.context=context;
@@ -22,6 +21,12 @@ namespace Ecommerce.Persistence.Repositories
         public async Task<List<Product>> GetAllProductsWithInclude()
         {
            return await context.Products.AsNoTracking().Include(x=>x.Category).ToListAsync();   
+        }
+
+        public async Task<bool> IsCategoryExist(int id)
+        {
+            var entry = await context.Categories.FindAsync(id);
+            return entry != null;
         }
     }
 }

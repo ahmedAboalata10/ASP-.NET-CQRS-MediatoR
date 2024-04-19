@@ -8,9 +8,12 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Persistence.DataBaseContext
 {
-    public class ApplicationDBContext:DbContext 
+    public class ApplicationDBContext : DbContext
     {
-       public ApplicationDBContext(DbContextOptions<ApplicationDBContext> dbContextOptions):base(dbContextOptions) { }
+        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> dbContextOptions) : base(dbContextOptions)
+        {
+
+        }
 
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }

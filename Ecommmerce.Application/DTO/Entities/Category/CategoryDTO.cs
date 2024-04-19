@@ -10,5 +10,6 @@ namespace Ecommmerce.Application.DTO.Entities.Category
     public class CategoryDTO : BaseEntityDTO<int>
     {
         public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

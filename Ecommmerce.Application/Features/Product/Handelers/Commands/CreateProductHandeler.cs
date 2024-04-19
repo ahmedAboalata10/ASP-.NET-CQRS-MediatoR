@@ -1,8 +1,8 @@
-﻿using Ecommmerce.Application.DTO.Entities.Product.Validators;
-using Ecommmerce.Application.Models;
+﻿using Ecommerce.Application.Models.Email;
+using Ecommmerce.Application.DTO.Entities.Product.Validators;
 using Ecommmerce.Application.Persistance.Email;
 using Ecommmerce.Application.Responses;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
 {
@@ -12,7 +12,7 @@ namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
         private readonly IMapper mapper;
         private readonly IEmailSender emailSender;
 
-        public CreateProductHandeler(IProductRepository productRepository, IMapper mapper,IEmailSender emailSender)
+        public CreateProductHandeler(IProductRepository productRepository, IMapper mapper,IEmailSender emailSender )
         {
             this.productRepository=productRepository;
             this.mapper=mapper;
@@ -29,6 +29,7 @@ namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
                 response.Success=false;
                 response.Message="Failed to Create Product";
                 response.Errors=validationResult.Errors.Select(x=> x.ErrorMessage).ToList();
+                return response;
             }
             var product = mapper.Map<Ecommerce.Domain.Entities.Product>(request.ProductDTO);
             await productRepository.CreateAsync(product);

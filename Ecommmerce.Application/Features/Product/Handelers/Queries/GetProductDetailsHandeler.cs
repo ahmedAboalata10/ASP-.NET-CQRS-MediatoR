@@ -1,4 +1,5 @@
 ﻿using Ecommmerce.Application.DTO.Entities.Product;
+using Ecommmerce.Application.Exceptions;
 using Ecommmerce.Application.Features.Product.Requests.Queries;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,12 @@ namespace Ecommmerce.Application.Features.Product.Handelers.Queries
 
         public async Task<ProductDTO> Handle(GetProductDetailsRequset request, CancellationToken cancellationToken)
         {
+
             var product = await productRepository.GetAsync(request.Id);
+            if (product is null)
+            {
+                throw new NotFoundException(nameof(Product),request.Id);
+            }
             var response =mapper.Map<ProductDTO>(product);
             return response;
         }

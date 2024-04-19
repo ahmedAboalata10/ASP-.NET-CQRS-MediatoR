@@ -1,13 +1,5 @@
 ﻿using Ecommmerce.Application.DTO.Entities.Category.Validators;
 using Ecommmerce.Application.Features.Categories.Requests.Commands;
-using Ecommmerce.Application.Features.Product.Requests.Commands;
-using Ecommmerce.Application.Persistance.Contracts;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ecommmerce.Application.Features.Categories.Handelers.Commands
 {

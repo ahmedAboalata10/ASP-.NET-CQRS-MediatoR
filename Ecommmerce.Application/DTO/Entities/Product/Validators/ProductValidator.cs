@@ -23,8 +23,8 @@ namespace Ecommmerce.Application.DTO.Entities.Product.Validators
                 .GreaterThan(0).WithMessage("{PropertyName} greater than  {ComparisonValue} ")
                 .MustAsync(async (id, token) =>
                 {
-                    var categoury = await repository.ExistAsync(id);
-                    return !categoury;
+                    var categouryIsExisted = await repository.IsCategoryExist(id);
+                    return categouryIsExisted;
                 }).WithMessage("{PropertyName} does not exist ?");
 
         }
