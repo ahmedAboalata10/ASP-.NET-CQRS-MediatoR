@@ -9,6 +9,7 @@ using Ecommmerce.Application.Features.Categories.Requests.Commands;
 using Ecommmerce.Application.Features.Product.Requests.Commands;
 using Ecommmerce.Application.MappingProfiles;
 using Ecommmerce.Application.Persistance.Contracts;
+using Ecommmerce.Application.Persistance.Email;
 using Ecommmerce.Application.Responses;
 using Moq;
 using Shouldly;
@@ -17,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IEmailSender = Ecommmerce.Application.Persistance.Email.IEmailSender;
 
 namespace Ecommerce.UnitTests.Features.Products
 {
@@ -25,6 +27,7 @@ namespace Ecommerce.UnitTests.Features.Products
         private readonly IMapper mapper;
         private readonly Mock<IProductRepository> mock;
         private readonly ProductDTO product;
+        private readonly IEmailSender emailSender;
         public CreateProductHandelerTest()
         {
             mock=  MockProductsRepository.GetProductRepository();
@@ -39,7 +42,7 @@ namespace Ecommerce.UnitTests.Features.Products
         [Fact]
         public async Task Test_Respone_Of_Product()
         {
-            var handler = new CreateProductHandeler(mock.Object, mapper);
+            var handler = new CreateProductHandeler(mock.Object, mapper, emailSender);
             var result = await handler.Handle(new CreateProductRequest { ProductDTO = product }, CancellationToken.None);
             result.ShouldBeOfType<BaseCommandResponse>();
             var products = await mock.Object.GetAllAsync();

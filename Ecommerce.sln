@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C911E4E5-CEEF-42AD-902C-EC1D17AD57FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{2D35741D-ABEA-48D2-8253-13B99A0293CA}"
+	ProjectSection(SolutionItems) = preProject
+		Ecommerce.API\Ecommerce.API.http = Ecommerce.API\Ecommerce.API.http
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{CE1C2C9A-3E7C-4F04-B8FF-FB3B8D52B063}"
 EndProject
@@ -25,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.API", "Ecommerce.API\Ecommerce.API.csproj", "{A3EC0CDB-68F2-4B05-9CEC-A909F7F85E62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.UnitTests", "Ecommerce.UnitTests\Ecommerce.UnitTests.csproj", "{F7611879-27A9-45C7-A2D6-D5AD1D8084B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.UnitTests", "Ecommerce.UnitTests\Ecommerce.UnitTests.csproj", "{F7611879-27A9-45C7-A2D6-D5AD1D8084B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
