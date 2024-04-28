@@ -1,14 +1,16 @@
 # CQRS & Medaitor Project 
 
- This project is an implementation of a robust software architecture utilizing CQRS with Mediator pattern for command/query segregation, Fluent Validation for clear and concise validation rules, AutoMapper for simplified object mapping, Generic Repository for abstracted data access, and Custom Exceptions 
- for handling application-specific errors. This hands-on exercise provides practical experience in building scalable, maintainable applications with a focus on the separation of concerns and code reusability.
+This project is an implementation of a robust software architecture utilizing CQRS with Mediator pattern for command/query segregation, Fluent Validation for clear and concise validation rules, AutoMapper for simplified object mapping, Generic Repository for abstracted data access, Custom Exceptions for handling application-specific errors. This hands-on exercise provides practical experience in building scalable, maintainable applications with a focus on the separation of concerns and code reusability. also, Unit Testing and Email Sending are used.
 
 ## Table of Contents
-- [Prerequisites](#Prerequisites)
-- [Getting Started](#gettingStarted)
-- [Usage](#usage)
-- [Contributing](#contributing)
+
+- [Prerequisites](#prerequisites).
+- [General Definitions](#generaldefinitions).
+- [Installation and  Getting Started](#gettingStarted).
+- [Usage](#usage).
+- [Contributing](#contributing).
 - [License](#license)
+- Technology Used
 
   
 ## Prerequisites
@@ -20,11 +22,60 @@
 - Unit Testing Skills.
 - SQL Server.
 - EF Core/ LINQ.
+- onion architecture
+- 
 
+## General Definitions
+What is CQRS and what are its benefits?
+-Command Query Responsibility Segregation (CQRS) is a software architectural pattern that suggests separating the operations that read data (queries) from those that modify data (commands) into different parts of the application. 
+--Benefits of CQRS include:
+1-Simplified Model
+2-Scalability
+3-Performance Optimization
+4-Flexibility
 
-## Getting Started
+What is onion architecture?
+Onion Architecture is a software architectural pattern that emphasizes the separation of concerns and the dependency inversion principle. In this architecture, the core business logic and domain model are placed at the center (the innermost layer), surrounded by layers representing different concerns, such as application services, interfaces, and infrastructure.
 
-Instructions on how to install the project or any dependencies needed.
+Key Components of the Onion Architecture  
+Core Domain
+Application Services:
+Persistence
+Infrastructure
+Presentation
+
+## Installation and  Getting Started 
+
+### We will divide this project into main Sections 
+1 - Setting UP application core (CQRS-Mediator).
+2 - Manage relations between Entities.
+3 - Setting up infrastructure.
+4 - Adding API Layer.
+5 - Setting Up Testing. 
+
+### Explanation of Each Section
+# Setting UP application core (CQRS-Mediator).
+- Create Project 
+   Create Solution 
+   Create Key Components
+     Src
+       API
+       Core 
+       Infrastructure
+       UI
+     Test
+  -Create layers
+    
+
+     
+     
+#### Setting UP application cor e (CQRS-Mediator)
+
+## Technology Used
+AutoMapper
+moqshouldly
+EF Core
+
 
 ## Usage
 
