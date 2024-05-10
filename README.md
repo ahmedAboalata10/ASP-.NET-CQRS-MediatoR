@@ -101,15 +101,8 @@ Examples and instructions on how to use the project. Include code snippets if ne
 
 Guidelines for contributing to the project, including how to report issues or submit pull requests.
 
-## Additional Sections (Optional)
-
-Depending on your project, you might want to include additional sections such as:
-
-- **Acknowledgements**: Credits to individuals or organizations that helped or inspired the project.
-- **FAQ**: Frequently asked questions and their answers.
-- **Support**: Information on how users can get support if they encounter issues.
-- **Changelog**: Record of changes made to the project over time.
-
 ## Contact
 
-Provide contact information if users have questions or need further assistance.
+Email: ahmed_c44@outlook.com
+LinkedIn: [https://www.linkedin.com/in/ahmedaboalata/](https://www.linkedin.com/in/ahmedaboalata/)
+
